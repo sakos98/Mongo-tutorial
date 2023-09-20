@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const departmentShema = new mongoose.Schema({
-  name: { type: String, require: true }
+const departmentSchema = new mongoose.Schema({
+  name: { type: String, required: true, minlength: 5, maxlength: 20 } 
 });
 
-module.exports = mongoose.model('Department', departmentShema);
+module.exports = mongoose.model('Department', departmentSchema);
