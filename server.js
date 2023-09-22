@@ -36,6 +36,8 @@ app.use((req, res, next) => {
   next();
 });
 
+module.exports = server;
+
     // show collection
     // db.collection('employees').find({ department: 'Testing' }).toArray((err, data) => {
     //   if (!err) console.log(data);
