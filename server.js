@@ -28,15 +28,17 @@ db.once('open', () => {
 });
 db.on('error', err => console.log('Error ' + err));
 
-app.listen('8000', () => {
+const server = app.listen('8000', () => {
   console.log('Server is running on port: 8000');
 });
+
 app.use((req, res, next) => {
   req.db = db;
   next();
 });
 
 module.exports = server;
+
 
     // show collection
     // db.collection('employees').find({ department: 'Testing' }).toArray((err, data) => {
